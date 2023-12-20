@@ -44,7 +44,6 @@ if __name__ == "__main__":
         k.float()
     denoiser = Denoiser(waveglow)
 
-
     abs_tc2_path = os.path.abspath(checkpoint_path)
     abs_wg_path = os.path.abspath(waveglow_path)
     tc2_num = abs_tc2_path.split('_')[-1]
@@ -52,18 +51,15 @@ if __name__ == "__main__":
     audio_prefix = tc2_num + "_" + wg_num
 
     texts = [
-        "현재 음성합성 기술은 중립적인 음색과 발음을 사용하여 감정 및 대화체에 따라 바뀌지 않음.",
-        "내가 말하고자 하는 감정을 담아 다른 사람들에게 표현하고 싶은 바를 정확히 전달하고 싶음.",
-        "이를 통해 사용자가 원하는 목소리와 스타일로 음성합성을 하며 더욱 자연스러운 TTS 프로그램을 제공하려 함",
+        "이를 통해 사용자가 원하는 목소리와 스타일로 음성합성을 하며 더욱 자연스러운 티티에스 프로그램을 제공하려 합니다",
     ]
 
     dir_name = "./inference_output"
     if not os.path.exists(dir_name):
         os.makedirs(dir_name)
 
-    for i in range(len(texts)):
-        sequence = np.array(text_to_sequence(texts[i], 
-                                            ['hangul_cleaners']))[None, :]
+    for i, text in enumerate(texts): 
+        sequence = np.array(text_to_sequence(text, ['hangul_cleaners']))[None, :]
         sequence = torch.autograd.Variable(
             torch.from_numpy(sequence)).cpu().long()
 
