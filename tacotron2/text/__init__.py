@@ -32,7 +32,7 @@ def g2i(transcription):
         else:
             print('Invalid grapheme, passing...')
             print(grapheme)
-            return 0
+            return [0]
     indexed_transcription.append(75)
     return indexed_transcription
 
