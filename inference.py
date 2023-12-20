@@ -15,7 +15,7 @@ import soundfile as sf
 print(sys.path)
 
 from tacotron2.hparams import create_hparams
-from tacotron2.model import Tacotron2gi
+from tacotron2.model import Tacotron2
 from tacotron2.layers import TacotronSTFT, STFT
 from tacotron2.audio_processing import griffin_lim
 from tacotron2.text import text_to_sequence
@@ -52,10 +52,9 @@ if __name__ == "__main__":
     audio_prefix = tc2_num + "_" + wg_num
 
     texts = [
-        "실종 당시 회색 후드티, 남색 바지, 검은색 가방 등을 착용하고 있었다.",
-        "프란치스코 교황이 방북 의사를 거듭 명확히 표명, 기대감이 향하는 모습이다.",
-        "고객님, 박병호 님의 성함으로 예약 확인이 되지 않았습니다.",
-        "말레이시아가 세계 삼대 반딧불 서식지인 만큼 반딧불 투어를 갈겁니다.",
+        "현재 음성합성 기술은 중립적인 음색과 발음을 사용하여 감정 및 대화체에 따라 바뀌지 않음.",
+        "내가 말하고자 하는 감정을 담아 다른 사람들에게 표현하고 싶은 바를 정확히 전달하고 싶음.",
+        "이를 통해 사용자가 원하는 목소리와 스타일로 음성합성을 하며 더욱 자연스러운 TTS 프로그램을 제공하려 함",
     ]
 
     dir_name = "./inference_output"

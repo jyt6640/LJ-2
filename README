@@ -6,19 +6,19 @@ pip install -r requirements.txt
 # 실행하면 inference_output 폴더에 웨이브 파일이 저장됨
 
 # 0034_G2A4E6S0C0_LJH (당황)
-python inference.py -t 당황/tc2_130000.ckpt -w 당황/wg_390000.ckpt
+python inference.py -t 당황_타코트론/tc2_130000.ckpt -w 당황_웨이브글로우/wg_390000.ckpt
 
 # 0044_G2A5E4S0C0_KTH (불안)
-python inference.py -t 불안/tc2_130000.ckpt -w 불안/wg_390000.ckpt
+python inference.py -t 불안_타코트론/tc2_130000.ckpt -w 불안_웨이브글로우/wg_390000.ckpt
 
 # 0044_G2A5E5S0C0_KTH (상처)
-python inference.py -t 상처/tc2_130000.ckpt -w 상처/wg_390000.ckpt
+python inference.py -t 상처_타코트론/tc2_130000.ckpt -w 상처_웨이브글로우/wg_390000.ckpt
 
 # 0046_G2A3E1S0C0_SSH (기쁨)
-python inference.py -t 기쁨/tc2_130000.ckpt -w 기쁨/wg_390000.ckpt
+python inference.py -t 기쁨_타코트론/tc2_130000.ckpt -w 기쁨_웨이브글로우/wg_390000.ckpt
 
 # 0046_G2A3E2S0C0_SSH (슬픔)
-python inference.py -t 슬픔/tc2_130000.ckpt -w 슬픔/wg_390000.ckpt
+python inference.py -t 슬픔_타코트론/tc2_130000.ckpt -w 슬픔_웨이브글로우/wg_390000.ckpt
 
 # 0046_G2A3E3S0C0_SSH (분노)
-python inference.py -t 분노/tc2_130000.ckpt -w 분노/wg_390000.ckpt
+python inference.py -t 분노_타코트론/tc2_130000.ckpt -w 분노_웨이브글로우/wg_390000.ckpt
